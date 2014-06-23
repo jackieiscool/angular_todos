@@ -1,0 +1,17 @@
+<h1>Todo App</h1>
+
+<div ng-controller="ItemsCtrl">
+
+  <form ng-submit="addItem()">
+    <input type="text" ng-model="newItem.title" placeholder="Title">
+    <button>Add Item</button>
+  </form>
+
+  <ul ng-repeat="item in items">
+    <!-- This is where you should put your edit form -->
+    <!-- Use ng-show to toggle it on/off -->
+    <li>{{item.title}}<button ng-click="deleteItem()">Delete</button></li>
+  </ul>
+
+
+</div>
